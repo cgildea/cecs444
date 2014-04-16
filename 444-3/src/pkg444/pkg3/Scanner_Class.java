@@ -59,7 +59,7 @@ public class Scanner_Class {
                     current_char = char_array[i];
             
                 System.out.print("Current char = "+current_char);             
-                System.out.print("Status of EOF = "+scan.hasNext()+"\n");
+                System.out.print(" Status of EOF = "+scan.hasNext()+"\n");
 
                 if(Character.isLetter(current_char))
                     current_read = 1;
@@ -185,6 +185,56 @@ public class Scanner_Class {
             }
 
 	}
+        switch(look_up(state, current_read))
+                    {
+                            case 1:
+                                outputArea.append("Token discovered is an "
+                                        + "INTEGER: " + 
+                                        token_under_construction + "\n");
+                                break;
+                            case 2:
+                                outputArea.append("Token discovered is an "
+                                        + "IDENTIFIER: " + 
+                                        token_under_construction +"\n");
+                                break;
+                            case 3:
+                                outputArea.append("Token discovered is an "
+                                        + "ASSIGNMENT OPERATOR: " + 
+                                        token_under_construction + "\n");
+                                break;
+                            case 4:
+                                outputArea.append("Token discovered is an "
+                                        + "ADDITION OPERATOR: " + 
+                                        token_under_construction + "\n");
+                                break;
+                            case 5:
+                                outputArea.append("Token discovered is a "
+                                        + "SEMICOLON: " + 
+                                        token_under_construction + "\n");
+                                break;
+                            case 6:
+                                outputArea.append("Token discovered is a "
+                                        + "MULTIPLY OPERATOR: " + 
+                                        token_under_construction + "\n");
+                                break;
+                            case 7:
+                                outputArea.append("Token discovered is an "
+                                        + "OPEN PARENTHESES: " + 
+                                        token_under_construction + "\n");
+                                break;
+                            case 8:
+                                outputArea.append("Token discovered is a "
+                                        + "CLOSE PARENTHESES: " + 
+                                        token_under_construction +  "\n");
+                                break;
+                            case 9:
+                                outputArea.append("Token discovered is a "
+                                        + "REAL NUMBER: " + 
+                                        token_under_construction + "\n");
+                            default:
+                                System.out.println("error");
+                                break;  
+                    }
         
         outputArea.append("Done scanning!\n");
         scan.close();
