@@ -25,7 +25,7 @@ import javax.swing.JTextArea;
 
 /**
  *
- * @author Cody
+ * @author Cody Gildea <cbgildea@gmail.com>
  */
 public class ParserLoader {
        public static void main(String[] args) throws FileNotFoundException, 
